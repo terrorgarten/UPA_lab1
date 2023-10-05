@@ -1,0 +1,5 @@
+# Project exclude paths
+/objectbox-books/.gradle/
+/objectbox-books/build/
+/objectbox-books/build/classes/java/main/
+/objectbox-books/build/classes/java/test/

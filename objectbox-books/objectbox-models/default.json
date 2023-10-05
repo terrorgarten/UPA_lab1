@@ -1,0 +1,140 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "3:1189997137663822039",
+      "lastPropertyId": "4:7139467512900384122",
+      "name": "Course",
+      "properties": [
+        {
+          "id": "1:3809733179495279439",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:6077516402287892453",
+          "name": "code",
+          "type": 9
+        },
+        {
+          "id": "3:7363058495309865686",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "4:7139467512900384122",
+          "name": "year",
+          "type": 5,
+          "flags": 4
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:3693757155770366582",
+      "lastPropertyId": "6:8297403491723832914",
+      "name": "Exam",
+      "properties": [
+        {
+          "id": "1:761646325983563560",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:858025831745366867",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:4216744894962851537",
+          "name": "date",
+          "type": 10
+        },
+        {
+          "id": "4:7372143278574578022",
+          "name": "capacity",
+          "type": 5,
+          "flags": 4
+        },
+        {
+          "id": "5:9150721206161309245",
+          "name": "published",
+          "type": 1,
+          "flags": 4
+        },
+        {
+          "id": "6:8297403491723832914",
+          "name": "courseId",
+          "indexId": "2:1303026831083115408",
+          "type": 11,
+          "flags": 1548,
+          "relationTarget": "Course"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "5:3267200953908480603",
+      "lastPropertyId": "3:7893154421900124547",
+      "name": "Student",
+      "properties": [
+        {
+          "id": "1:556069678595872916",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7662221740721628663",
+          "name": "studentId",
+          "type": 5,
+          "flags": 4
+        },
+        {
+          "id": "3:7893154421900124547",
+          "name": "name",
+          "type": 9
+        }
+      ],
+      "relations": [
+        {
+          "id": "1:1109155264961496770",
+          "name": "courses",
+          "targetId": "3:1189997137663822039"
+        },
+        {
+          "id": "2:1082757736656670190",
+          "name": "exams",
+          "targetId": "4:3693757155770366582"
+        }
+      ]
+    }
+  ],
+  "lastEntityId": "5:3267200953908480603",
+  "lastIndexId": "2:1303026831083115408",
+  "lastRelationId": "2:1082757736656670190",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [
+    5310584198102514545,
+    7201126546508280063
+  ],
+  "retiredIndexUids": [
+    6259585112460366988
+  ],
+  "retiredPropertyUids": [
+    7399094700549109888,
+    510898695775703450,
+    2294492248237045550,
+    7413595551107989542,
+    7165443122369361858,
+    8847913903185149369
+  ],
+  "retiredRelationUids": [],
+  "version": 1
+}

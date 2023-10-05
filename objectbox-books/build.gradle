@@ -1,0 +1,48 @@
+buildscript {
+    ext.objectboxVersion = '2.9.1'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "io.objectbox:objectbox-gradle-plugin:$objectboxVersion"
+    }
+}
+
+plugins {
+    // Apply the java plugin to add support for Java
+    id 'java'
+
+    // Apply the application plugin to add support for building a CLI application.
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "io.objectbox:objectbox-java:$objectboxVersion"
+
+    // Optional: include all native libraries for distribution
+    // (only the one for the current platform is added automatically)
+    implementation "io.objectbox:objectbox-linux:$objectboxVersion"
+    implementation "io.objectbox:objectbox-macos:$objectboxVersion"
+    implementation "io.objectbox:objectbox-windows:$objectboxVersion"
+
+    testImplementation 'junit:junit:4.13.2'
+}
+
+apply plugin: 'io.objectbox'
+
+application {
+    // Define the main class for the application.
+    mainClass.set('cz.vut.fit.rychly.objectbox.books.Main')
+}
+
+run {
+    systemProperties System.getProperties()
+}
+
+tasks.withType(JavaCompile) {
+    //options.compilerArgs += ['-Xlint:deprecation', '-Xlint:unchecked']
+}
